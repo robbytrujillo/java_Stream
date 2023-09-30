@@ -11,5 +11,7 @@ public class CreateStreamTest {
 
         Stream<String> emptyStream = Stream.empty();
 
+        Stream<String> oneStream = Stream.of("Robby");
+
     }
 }
