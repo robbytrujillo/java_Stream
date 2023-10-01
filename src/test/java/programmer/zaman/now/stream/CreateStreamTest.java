@@ -13,5 +13,8 @@ public class CreateStreamTest {
 
         Stream<String> oneStream = Stream.of("Robby");
 
+        String data = null;
+        Stream<String> emptyOrNotStream = Stream.ofNullable(data);
+
     }
 }
