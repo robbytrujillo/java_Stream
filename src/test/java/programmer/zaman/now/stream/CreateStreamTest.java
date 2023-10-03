@@ -69,5 +69,9 @@ public class CreateStreamTest {
         Stream<String> stringStream = collectionString.stream();
 
         stringStream.forEach(System.out::println);
+
+        Stream<String> stringStream2 = collectionString.stream();
+
+        stringStream2.forEach(System.out::println);
     }
 }
