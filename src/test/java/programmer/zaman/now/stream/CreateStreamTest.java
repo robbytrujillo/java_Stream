@@ -14,10 +14,22 @@ public class CreateStreamTest {
 
         Stream<String> emptyStream = Stream.empty();
 
+        emptyStream.forEach(data -> {
+            System.out.println(data);
+        });
+
         Stream<String> oneStream = Stream.of("Robby"); // Stream.of -> wajib memasukkan data minimal satu elemen
 
-        String data = null;
+        oneStream.forEach(data -> {
+            System.out.println(data);
+        });
+
+        String data = "Kusuma";
         Stream<String> emptyOrNotStream = Stream.ofNullable(data);
+
+        emptyOrNotStream.forEach(item -> {
+            System.out.println(item);
+        });
 
     }
 
@@ -27,8 +39,8 @@ public class CreateStreamTest {
 
         Stream<String> arrayStream = Stream.of("Robby", "Ilham", "Kusuma");
 
-        arrayStream.forEach(value -> {
-            System.out.println(value);
+        arrayStream.forEach(name -> {
+            System.out.println(name);
         });
 
         Stream<Integer> streamInteger = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
@@ -44,6 +56,8 @@ public class CreateStreamTest {
         };
 
         Stream<String> streamFromArray = Arrays.stream(array);
+        streamFromArray.forEach(System.out::println);
+
 
     }
 }
