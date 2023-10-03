@@ -74,4 +74,11 @@ public class CreateStreamTest {
 
         stringStream2.forEach(System.out::println);
     }
+
+    // membuat infinite stream (mengalir secara terus menerus)
+    @Test
+    void testCreateInfiniteStream() {
+        Stream<String> stream = Stream.generate(() -> "Programmer Zaman Now");
+        stream.forEach(System.out::println);
+    }
 }
