@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.lang.reflect.Array;
 import java.sql.SQLOutput;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class CreateStreamTest {
@@ -59,5 +61,12 @@ public class CreateStreamTest {
         streamFromArray.forEach(System.out::println);
 
 
+    }
+
+    @Test
+    void testCreateStreamFromCollection() {
+        Collection<String> collectionString = List.of("Robby", "Ilham", "Kusuma");
+
+        Stream<String> stringStream = collectionString.stream();
     }
 }
