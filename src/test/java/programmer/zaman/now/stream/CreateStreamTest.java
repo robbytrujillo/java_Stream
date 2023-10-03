@@ -60,7 +60,6 @@ public class CreateStreamTest {
         Stream<String> streamFromArray = Arrays.stream(array);
         streamFromArray.forEach(System.out::println);
 
-
     }
 
     @Test
@@ -68,5 +67,7 @@ public class CreateStreamTest {
         Collection<String> collectionString = List.of("Robby", "Ilham", "Kusuma");
 
         Stream<String> stringStream = collectionString.stream();
+
+        stringStream.forEach(System.out::println);
     }
 }
