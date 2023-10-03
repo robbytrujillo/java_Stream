@@ -11,7 +11,7 @@ public class CreateStreamTest {
 
         Stream<String> emptyStream = Stream.empty();
 
-        Stream<String> oneStream = Stream.of("Robby");
+        Stream<String> oneStream = Stream.of("Robby"); // Stream.of -> wajib memasukkan data minimal satu elemen
 
         String data = null;
         Stream<String> emptyOrNotStream = Stream.ofNullable(data);
