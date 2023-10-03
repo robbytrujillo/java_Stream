@@ -79,6 +79,10 @@ public class CreateStreamTest {
     @Test
     void testCreateInfiniteStream() {
         Stream<String> stream = Stream.generate(() -> "Programmer Zaman Now");
-        stream.forEach(System.out::println);
+        // stream.forEach(System.out::println);
+
+        Stream<Integer> interate = Stream.iterate(1, value -> value + 1);
+
+        interate.forEach(System.out::println);
     }
 }
