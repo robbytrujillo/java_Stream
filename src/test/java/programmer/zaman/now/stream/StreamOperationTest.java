@@ -17,5 +17,8 @@ public class StreamOperationTest {
         Stream<String> streamUpper = streamNames.map(name -> name.toUpperCase()); // map itu dugunakan untuk mengkonversi dari suatu data asli menjadi data baru
 
         streamUpper.forEach(System.out::println);
+
+        names.forEach(System.out::println);
+
     }
 }
