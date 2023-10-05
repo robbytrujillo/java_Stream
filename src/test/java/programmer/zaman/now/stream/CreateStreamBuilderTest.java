@@ -25,4 +25,5 @@ public class CreateStreamBuilderTest {
 
         stream.forEach(System.out::println);
     }
+
 }
