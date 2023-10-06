@@ -21,4 +21,5 @@ public class StreamOperationTest {
         names.forEach(System.out::println);
 
     }
+
 }
