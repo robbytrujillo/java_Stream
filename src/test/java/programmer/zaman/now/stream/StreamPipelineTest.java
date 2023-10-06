@@ -20,4 +20,14 @@ public class StreamPipelineTest {
 
         streamMr.forEach(System.out::println);
     }
+
+    @Test
+    void testCreateStreamPipelineOk() {
+        List<String> list = List.of("Robby", "Ilham", "Kusuma");
+
+        list.stream()
+                .map(name -> name.toUpperCase())
+                .map(upper -> "Mr." + upper)
+                .forEach(System.out::println);
+    }
 }
