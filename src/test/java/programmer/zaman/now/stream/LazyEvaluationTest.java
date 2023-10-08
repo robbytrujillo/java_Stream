@@ -19,4 +19,20 @@ public class LazyEvaluationTest {
                 });
 
     }
+
+    @Test
+    void testTerminalOperation() {
+
+        List<String> names = List.of("Robby", "Ilham", "Kusuma");
+
+        names.stream()
+                .map(name -> {
+                    System.out.println("Change " + name + " to Uppercase");
+                return name.toUpperCase();
+                })
+                .forEach(upper -> {
+                    System.out.println(upper);
+                });
+
+    }
 }
