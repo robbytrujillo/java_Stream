@@ -30,8 +30,13 @@ public class LazyEvaluationTest {
                     System.out.println("Change " + name + " to Uppercase");
                 return name.toUpperCase();
                 })
-                .forEach(upper -> {
-                    System.out.println(upper);
+                .map(upper -> {
+                    System.out.println("Change " + upper + " to Mr. ");
+                return "Mr. " + upper;
+                })
+                //.forEach(upper -> {
+                .forEach(mr -> {
+                    System.out.println(mr);
                 });
 
     }
