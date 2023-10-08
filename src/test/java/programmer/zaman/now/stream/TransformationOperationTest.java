@@ -19,7 +19,7 @@ public class TransformationOperationTest {
     void testFlatMap() {
         List.of("Robby", "Ilham", "Kusuma").stream()
                 .map(name -> name.toUpperCase())
-                .flatMap(upper -> Stream.of(upper, upper.length()))
+                .flatMap(upper -> Stream.of(upper, upper.length())) // merubah dari sebuah data menjadi stream yang lain
                 .forEach(length -> System.out.println(length));
     }
 }
