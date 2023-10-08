@@ -35,7 +35,7 @@ public class LazyEvaluationTest {
                 return "Mr. " + upper;
                 })
                 //.forEach(upper -> {
-                .forEach(mr -> {
+                .forEach(mr -> { // harus menggunakan foreach agar dapat berjalan
                     System.out.println(mr);
                 });
 
