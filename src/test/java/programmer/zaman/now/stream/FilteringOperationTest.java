@@ -8,6 +8,12 @@ public class FilteringOperationTest {
 
     @Test
     void testFilter() {
-        List<String> names = List.of("Robby", "Ilham", "Kusuma")
+        List.of("Robby", "Ilham", "Kusuma", "Joko", "Asep").stream()
+                .filter(name -> name.length() > 5)
+                .forEach(System.out::println);
+
+        List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).stream()
+                .filter(number -> number % 2 == 0)
+                .forEach(System.out::println);
     }
 }
