@@ -42,4 +42,25 @@ public class RetrievingOperationTest {
         Optional<String> anyName = names.stream().findAny();
         Optional<String> firstName = names.stream().findFirst();
     }
+
+    @Test
+    void testFindAny() {
+        Optional<String> optional = List.of("Robby", "Ilham", "Kusuma", "Asep", "Tatang").stream()
+                .findAny();
+
+        optional.ifPresent(name -> {
+            System.out.println(name);
+        });
+    }
+
+    @Test
+    void testFindFirst() {
+        Optional<String> optional = List.of("Robby", "Ilham", "Kusuma", "Asep", "Tatang").stream()
+                .findFirst();
+
+        optional.ifPresent(name -> {
+            System.out.println(name);
+        });
+    }
+
 }
