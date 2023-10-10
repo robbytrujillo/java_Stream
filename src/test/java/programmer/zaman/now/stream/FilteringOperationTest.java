@@ -16,4 +16,11 @@ public class FilteringOperationTest {
                 .filter(number -> number % 2 == 0)
                 .forEach(System.out::println);
     }
+
+    @Test
+    void testDistinc() {
+        List.of("Robby", "Ilham", "Kusuma", " Robby", "Joko", "Asep", "Joko").stream()
+                .distinct()
+                .forEach(System.out::println);
+    }
 }
