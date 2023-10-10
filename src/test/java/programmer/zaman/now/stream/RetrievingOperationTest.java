@@ -19,4 +19,11 @@ public class RetrievingOperationTest {
                 .skip(2)
                 .forEach(System.out::println);
     }
+
+    @Test
+    void testTakeWhile() {
+        List.of("Robby", "Ilham", "Kusuma", "Asep", "Tatang").stream()
+                .takeWhile(name -> name.length() <= 4)
+                .forEach(System.out::println);
+    }
 }
