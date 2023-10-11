@@ -25,13 +25,16 @@ public class AggregateOperationTest {
     void testCount() {
         long count = List.of("Robby", "Ilham", "Kusuma", "Programmer", "Zaman", "Now").stream()
                 .count();
+
         System.out.println(count);
     }
 
     // Reduce Operator
     @Test
     void testSum() {
-        List.of(1, 2, 3, 4, 5).stream()
+        var result = List.of(1, 2, 3, 4, 5).stream()
                 .reduce(0, (value, item) -> value + item);
+
+        System.out.println(result);
     }
 }
