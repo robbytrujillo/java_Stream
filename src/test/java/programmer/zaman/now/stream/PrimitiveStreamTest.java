@@ -25,5 +25,9 @@ public class PrimitiveStreamTest {
 
         OptionalDouble optionalDouble = intStream.average();
         optionalDouble.ifPresent(System.out::println);
+
+        IntStream.range(1, 100)
+                .mapToObj(number -> "Number : " + number)
+                .forEach(System.out::println);
     }
 }
