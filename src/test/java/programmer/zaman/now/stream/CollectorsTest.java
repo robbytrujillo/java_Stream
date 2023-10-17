@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Set;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -24,5 +25,14 @@ public class CollectorsTest {
         System.out.println(list);
         List<String> immutableList = getStream().collect(Collectors.toUnmodifiableList());
         System.out.println(immutableList);
+    }
+
+    @Test
+    void testMap() {
+        Map<String, Integer> map = getStream().collect(Collectors.toMap(
+                name -> name,
+                name -> name.length()
+        ));
+        System.out.println(map);
     }
 }
