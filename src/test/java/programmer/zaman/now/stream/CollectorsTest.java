@@ -16,9 +16,13 @@ public class CollectorsTest {
     @Test
     void testCollection() {
         Set<String> set = getStream().collect(Collectors.toSet());
+        System.out.println(set);
         Set<String> immutableSet = getStream().collect(Collectors.toUnmodifiableSet());
+        System.out.println(immutableSet);
 
         List<String> list = getStream().collect(Collectors.toList());
+        System.out.println(list);
         List<String> immutableList = getStream().collect(Collectors.toUnmodifiableList());
+        System.out.println(immutableList);
     }
 }
