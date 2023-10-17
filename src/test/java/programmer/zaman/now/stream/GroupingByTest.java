@@ -11,7 +11,20 @@ public class GroupingByTest {
 
     @Test
     void testGroupingBy() {
-        Map<Integer, List<Integer>> collect = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-             .collect(Collectors.groupingBy(number -> number));
+//        Map<Integer, List<Integer>> collect = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+//             .collect(Collectors.groupingBy(number -> number));
+//
+//        System.out.println(collect);
+
+        Map<String, List<Integer>> collect = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+             .collect(Collectors.groupingBy(number -> {
+                 if (number > 5) {
+                     return "Besar";
+                 } else {
+                     return "Kecil";
+                 }
+             }));
+
+        System.out.println(collect);
     }
 }
